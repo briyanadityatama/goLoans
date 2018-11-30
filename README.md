@@ -26,3 +26,43 @@ go run main.go
 ```
 
 - go to [http://localhost:8080](http://localhost:8080)
+
+## POST & GET Method
+
+Try to POST first data via POSTMAN
+
+POST => `http://localhost:8080/clients`
+
+Insert raw data in body e.g
+
+```
+{
+	"ktpNumber" : "3522582509010002",
+	"amount"    : 10000000,
+	"term"      : 30,
+	"birthDate" : "1 December 1994",
+	"name"      : "Doe"
+}
+```
+
+Try to GET the clients by ktpNumber
+
+GET => `http://localhost:8080/clients/3522582509010002`
+
+output will look like this
+
+```
+{
+    "ktpNumber": "3522582509010002",
+    "birthDate": "1 December 1994",
+    "name": "Doe",
+    "goLoans": {
+        "links": [
+            {
+                "rel": "self",
+                "href": "http://localhost:8080/clients/3522582509010002/goLoans"
+            }
+        ]
+    }
+}
+```
