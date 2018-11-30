@@ -15,6 +15,10 @@ Example financial **RESTful microservice** for taking Loans written entirely in 
 - repay the loan - either partially or in full
 - extend the loan of a given client
 
+## Before RUN
+
+Make sure this project placed on your GOPATH/go or whatever your GOPATH name.
+
 ## Run
 
 ```
